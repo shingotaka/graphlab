@@ -773,6 +773,8 @@ For instance in this <tt>weight</tt> format file, there are 5 edges:
 5 3 3.0
 \endverbatim
 
+IMPORTANT: Vertex ids must start from 1 and must not skip any numbers.
+
 To partition a graph, the minimal set of options required are:
 
 \verbatim
@@ -799,7 +801,8 @@ assigned partitions. For instance:
 
 \subsection Options
 Relevant options are:
-\li \b --graph (Required). The prefix from which to load the graph data
+\li \b --graph (Required). The prefix from which to load the graph data.
+                           Vertex ids must start from 1 and must not skip any numbers.
 \li \b --format (Required). The format of the input graph. If "weight" is 
 set, the program will read the data file where each line holds [id1] [id2] 
 [weight].
